@@ -28,6 +28,86 @@
           "id": 8
         }
       }
+    },
+    "11": {
+      "title": "2. Cell",
+      "id": 9,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Cell -- essential unit of Game of Life, and board of canvas<div><br></div><div>Cell -- has all the AI DNA</div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "fields",
+          "id": 10,
+          "ideas": {
+            "1": {
+              "title": "shape",
+              "id": 13,
+              "ideas": {
+                "1": {
+                  "title": "xCell",
+                  "id": 14
+                },
+                "2": {
+                  "title": "yCell",
+                  "id": 15
+                },
+                "3": {
+                  "title": "wCell",
+                  "id": 16
+                }
+              }
+            },
+            "2": {
+              "title": "color",
+              "id": 18,
+              "ideas": {
+                "1": {
+                  "title": "lifeColor",
+                  "id": 19
+                },
+                "2": {
+                  "title": "deathColor",
+                  "id": 20
+                }
+              }
+            },
+            "3": {
+              "title": "state",
+              "id": 21,
+              "ideas": {
+                "1": {
+                  "title": "now",
+                  "id": 22
+                },
+                "2": {
+                  "title": "previous",
+                  "id": 23
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "state --<div><br></div><div>1. colour is specified by value or number differences</div><div>2. state is to use number to differentiate colours for cells</div>"
+                },
+                "style": {}
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "methods",
+          "id": 11
+        },
+        "1.5": {
+          "title": "constructor",
+          "id": 12
+        }
+      }
     }
   }
 }
