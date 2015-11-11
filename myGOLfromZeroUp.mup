@@ -17,15 +17,29 @@
               "ideas": {
                 "1": {
                   "title": "debugSetup",
-                  "id": 43
+                  "id": 43,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "2": {
                   "title": "debugToggle",
-                  "id": 44
+                  "id": 44,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "3": {
                   "title": "watcherToggle",
-                  "id": 45
+                  "id": 45,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#ff6600"
                 }
               }
             },
@@ -35,10 +49,19 @@
               "ideas": {
                 "1": {
                   "title": "cell1",
-                  "id": 47
+                  "id": 47,
+                  "attr": {
+                    "style": {}
+                  }
                 }
+              },
+              "attr": {
+                "style": {}
               }
             }
+          },
+          "attr": {
+            "style": {}
           }
         },
         "2": {
@@ -58,15 +81,29 @@
               "ideas": {
                 "1": {
                   "title": "true",
-                  "id": 49
+                  "id": 49,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "2": {
                   "title": "false",
-                  "id": 50
+                  "id": 50,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "3": {
                   "title": "false",
-                  "id": 51
+                  "id": 51,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#ff6600"
                 }
               }
             },
@@ -76,11 +113,17 @@
               "ideas": {
                 "1": {
                   "title": "size(600,600)",
-                  "id": 56
+                  "id": 56,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "2": {
                   "title": "background(0)",
-                  "id": 57
+                  "id": 57,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "3": {
                   "title": "debugSetup",
@@ -88,10 +131,21 @@
                   "ideas": {
                     "1": {
                       "title": "only run once",
-                      "id": 62
+                      "id": 62,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#ff6600"
                     }
                   }
                 }
+              },
+              "attr": {
+                "style": {}
               }
             },
             "3": {
@@ -117,9 +171,14 @@
                       "contentType": "text/html",
                       "content": "<div>&nbsp; if (debugSetup) {</div><div>&nbsp; println(\"cell1 location: \", cell1.xCell, \":\", cell1.yCell);</div><div>&nbsp; println(\"cell1 color: \", cell1.deathColor, \":\", cell1.lifeColor);</div><div>&nbsp; println(\"cell1 state: \", cell1.now, \":\", cell1.previous);</div><div>&nbsp; }</div><div><br></div><div>There is no need for toggling debugSetup, just manually set it true always.&nbsp;</div><div><br></div><div>in fact, when using it we may have to use it with noLoop()</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "#ff6600"
+                    }
                   }
                 }
+              },
+              "attr": {
+                "style": {}
               }
             }
           }
@@ -134,7 +193,10 @@
               "ideas": {
                 "1": {
                   "title": "cell1.display()",
-                  "id": 63
+                  "id": 63,
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "2": {
                   "title": "debug it",
@@ -144,11 +206,19 @@
                       "contentType": "text/html",
                       "content": "<div>&nbsp; if (debugToggle) {</div><div>&nbsp; &nbsp; &nbsp;println(\"frame: \", frameCount);</div><div>&nbsp; &nbsp; &nbsp;println(\"cell1 is displayed\");&nbsp;</div><div>&nbsp; }</div><div><br></div><div>using frameCount to tell us it is keep drawing cell1</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "#ff6600"
+                    }
                   }
                 }
+              },
+              "attr": {
+                "style": {}
               }
             }
+          },
+          "attr": {
+            "style": {}
           }
         },
         "4": {
@@ -188,13 +258,21 @@
                     "style": {}
                   }
                 }
+              },
+              "attr": {
+                "style": {
+                  "background": "#ff6600"
+                }
               }
             }
           }
         },
         "5": {
           "title": "...",
-          "id": 8
+          "id": 8,
+          "attr": {
+            "style": {}
+          }
         }
       },
       "attr": {
@@ -415,5 +493,11 @@
       }
     }
   },
-  "links": []
+  "links": [],
+  "attr": {
+    "storyboards": [
+      "Storyboard 1"
+    ],
+    "style": {}
+  }
 }
