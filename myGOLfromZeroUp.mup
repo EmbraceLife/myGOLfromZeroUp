@@ -27,6 +27,10 @@
           "title": "...",
           "id": 8
         }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
       }
     },
     "11": {
@@ -97,6 +101,10 @@
                 "style": {}
               }
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "2": {
@@ -105,9 +113,76 @@
         },
         "1.5": {
           "title": "constructor",
-          "id": 12
+          "id": 12,
+          "ideas": {
+            "1": {
+              "title": "Cell(x, y, w)",
+              "id": 24,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "Cell(x, y, w) --<div><br></div><div>1. whenever instantiate a cell object, we give it a specified xCell, yCell and wCell</div><div>2. because, cells are everywhere in canvas, we need specifics to manipulate them</div>"
+                },
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": " x, y, w",
+                  "id": 26,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "x, y, w --<div><br></div><div>1. differentiate one cell from the other when instantiating cells</div><div><br></div><div>2. values of other fields are shared by all cells at instantiation</div><div><br></div><div>3. other fields may change values of other fields during evolution</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "now",
+                  "id": 27,
+                  "ideas": {
+                    "1": {
+                      "title": "= round(random(1))",
+                      "id": 29
+                    }
+                  }
+                },
+                "3": {
+                  "title": "previous",
+                  "id": 28,
+                  "ideas": {
+                    "1": {
+                      "title": "= now;",
+                      "id": 30
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "lifeColor",
+                  "id": 31,
+                  "ideas": {
+                    "1": {
+                      "title": "= color selector value",
+                      "id": 32
+                    }
+                  }
+                },
+                "1.75": {
+                  "title": "deadthColor",
+                  "id": 33,
+                  "ideas": {
+                    "1": {
+                      "title": "=color selector value",
+                      "id": 34
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
-  }
+  },
+  "links": []
 }
