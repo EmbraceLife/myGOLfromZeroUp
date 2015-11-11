@@ -1,0 +1,33 @@
+{
+  "title": "Game Of Life",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "1. skeleton",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "global variable",
+          "id": 3
+        },
+        "2": {
+          "title": "void setup()",
+          "id": 5
+        },
+        "3": {
+          "title": "void draw()",
+          "id": 6
+        },
+        "4": {
+          "title": "void keyPressed() ",
+          "id": 7
+        },
+        "5": {
+          "title": "...",
+          "id": 8
+        }
+      }
+    }
+  }
+}
