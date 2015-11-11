@@ -13,8 +13,28 @@ class Cell {
    lifeColor = #EA5905;
    deathColor = #050200;
    
-   now = round(random(1));
+   if (int(random(100)) < 15) {
+     now = 1;
+   } else {
+     now = 0; 
+   }
+   
    previous = now;
   }
+  
+  void display() {
+     
+    stroke(50);
+    
+    if (now == 1) {
+       fill(lifeColor); 
+    } else {
+       fill(deathColor); 
+    }
+    
+    
+    rect(xCell, yCell, wCell, wCell);
+  }
+  
   
 }

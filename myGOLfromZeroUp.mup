@@ -109,7 +109,59 @@
         },
         "2": {
           "title": "methods",
-          "id": 11
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "display()",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "stroke()",
+                  "id": 38,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "stroke()<div><br></div><div>if totally black, then there is no line frame for each cell</div><div><br></div><div>stroke(50) to make the liner visible but not too contrast</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "fill()",
+                  "id": 39,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "fill(deathColor) or fill(lifeColor) ??<div><br></div><div>if now == 1, then lifeColor; otherwise, deathColor</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "rect()",
+                  "id": 40,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\">rect(xCell, yCell, wCell, wCell)</span><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "randomizeState()",
+              "id": 36
+            },
+            "3": {
+              "title": "evolveByRule()",
+              "id": 37
+            }
+          }
         },
         "1.5": {
           "title": "constructor",
@@ -142,9 +194,16 @@
                   "id": 27,
                   "ideas": {
                     "1": {
-                      "title": "= round(random(1))",
-                      "id": 29
+                      "title": "int(random(100) < 15",
+                      "id": 41
                     }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div><div>&nbsp; &nbsp;if (int(random(100)) &lt; 15) {</div><div>&nbsp; &nbsp; &nbsp;now = 1;</div><div>&nbsp; &nbsp;} else {</div><div>&nbsp; &nbsp; &nbsp;now = 0;&nbsp;</div><div>&nbsp; &nbsp;}</div></div><div><br></div><div>make sure only 15% change to have an alive cell</div>"
+                    },
+                    "style": {}
                   }
                 },
                 "3": {
@@ -179,6 +238,10 @@
                 }
               }
             }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
           }
         }
       }
