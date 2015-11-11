@@ -9,19 +9,188 @@
       "ideas": {
         "1": {
           "title": "global variable",
-          "id": 3
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "boolean",
+              "id": 42,
+              "ideas": {
+                "1": {
+                  "title": "debugSetup",
+                  "id": 43
+                },
+                "2": {
+                  "title": "debugToggle",
+                  "id": 44
+                },
+                "3": {
+                  "title": "watcherToggle",
+                  "id": 45
+                }
+              }
+            },
+            "2": {
+              "title": "Cell",
+              "id": 46,
+              "ideas": {
+                "1": {
+                  "title": "cell1",
+                  "id": 47
+                }
+              }
+            }
+          }
         },
         "2": {
           "title": "void setup()",
-          "id": 5
+          "id": 5,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "we can set println() debug at setup()"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "debug initials",
+              "id": 48,
+              "ideas": {
+                "1": {
+                  "title": "true",
+                  "id": 49
+                },
+                "2": {
+                  "title": "false",
+                  "id": 50
+                },
+                "3": {
+                  "title": "false",
+                  "id": 51
+                }
+              }
+            },
+            "2": {
+              "title": "canvas",
+              "id": 53,
+              "ideas": {
+                "1": {
+                  "title": "size(600,600)",
+                  "id": 56
+                },
+                "2": {
+                  "title": "background(0)",
+                  "id": 57
+                },
+                "3": {
+                  "title": "debugSetup",
+                  "id": 60,
+                  "ideas": {
+                    "1": {
+                      "title": "only run once",
+                      "id": 62
+                    }
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "cell1",
+              "id": 58,
+              "ideas": {
+                "1": {
+                  "title": "instantiation",
+                  "id": 59,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "cell1 = new Cell(int(random(width-10)), int(random(height-10)), 10);<div><br></div><div>make sure cell1 will be within canvas</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "debugSetup",
+                  "id": 61,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>&nbsp; if (debugSetup) {</div><div>&nbsp; println(\"cell1 location: \", cell1.xCell, \":\", cell1.yCell);</div><div>&nbsp; println(\"cell1 color: \", cell1.deathColor, \":\", cell1.lifeColor);</div><div>&nbsp; println(\"cell1 state: \", cell1.now, \":\", cell1.previous);</div><div>&nbsp; }</div><div><br></div><div>There is no need for toggling debugSetup, just manually set it true always.&nbsp;</div><div><br></div><div>in fact, when using it we may have to use it with noLoop()</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            }
+          }
         },
         "3": {
           "title": "void draw()",
-          "id": 6
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "cell1",
+              "id": 64,
+              "ideas": {
+                "1": {
+                  "title": "cell1.display()",
+                  "id": 63
+                },
+                "2": {
+                  "title": "debug it",
+                  "id": 65,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>&nbsp; if (debugToggle) {</div><div>&nbsp; &nbsp; &nbsp;println(\"frame: \", frameCount);</div><div>&nbsp; &nbsp; &nbsp;println(\"cell1 is displayed\");&nbsp;</div><div>&nbsp; }</div><div><br></div><div>using frameCount to tell us it is keep drawing cell1</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            }
+          }
         },
         "4": {
           "title": "void keyPressed() ",
-          "id": 7
+          "id": 7,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "we can press key to toggle specific debug like watching specific points of the programs"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "toggles",
+              "id": 66,
+              "ideas": {
+                "1": {
+                  "title": "debugToggle()",
+                  "id": 67,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>&nbsp; if (key == 'd') {</div><div>&nbsp; &nbsp; &nbsp;debugToggle = !debugToggle;&nbsp;</div><div>&nbsp; }</div><div>&nbsp;&nbsp;</div><div><br></div><div><br></div><div>create toggles to turn debug on and off</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "watcherToggle()",
+                  "id": 68,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>&nbsp; if (key == 'w') {</div><div>&nbsp; &nbsp; &nbsp;watcherToggle = !watcherToggle;</div><div>&nbsp; }</div><div><br></div><div>turn watcher on and off</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            }
+          }
         },
         "5": {
           "title": "...",
@@ -29,8 +198,7 @@
         }
       },
       "attr": {
-        "style": {},
-        "collapsed": true
+        "style": {}
       }
     },
     "11": {
@@ -116,7 +284,7 @@
               "id": 35,
               "ideas": {
                 "1": {
-                  "title": "stroke()",
+                  "title": "stroke(50)",
                   "id": 38,
                   "attr": {
                     "attachment": {
@@ -127,7 +295,7 @@
                   }
                 },
                 "2": {
-                  "title": "fill()",
+                  "title": "fill(deathColor/lifeColor)",
                   "id": 39,
                   "attr": {
                     "attachment": {
@@ -138,7 +306,7 @@
                   }
                 },
                 "3": {
-                  "title": "rect()",
+                  "title": "rect() ",
                   "id": 40,
                   "attr": {
                     "attachment": {
