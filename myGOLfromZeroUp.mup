@@ -69,14 +69,14 @@
                   "id": 87,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#E0FFFF"
+                  "background": "transparent"
                 }
               }
             }
@@ -205,7 +205,7 @@
                   "id": 89,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -214,7 +214,7 @@
                   "id": 90,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -227,14 +227,14 @@
                   "id": 91,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#E0FFFF"
+                  "background": "transparent"
                 }
               }
             }
@@ -521,7 +521,7 @@
                   "id": 93,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -534,7 +534,7 @@
                   "id": 94,
                   "attr": {
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -547,7 +547,7 @@
                   "id": 95,
                   "attr": {
                     "style": {
-                      "background": "#3CB371"
+                      "background": "#90EE90"
                     }
                   }
                 },
@@ -557,17 +557,30 @@
                   "attr": {
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "<div>void randomizeBoard(int colBoard, int rowBoard, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
+                      "content": "<div>void randomizeBoard(int colBoard, int rowBoard, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div><div><br></div><div>1. now let's add randomizeBoardToggle to the function above</div>"
                     },
                     "style": {
-                      "background": "#E0FFFF"
+                      "background": "#90EE90"
+                    }
+                  }
+                },
+                "2.75": {
+                  "title": "evolveBoard()",
+                  "id": 98,
+                  "attr": {
+                    "style": {
+                      "background": "#90EE90"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div><font size=\"3\">void evolveBoard(int colsBoard, int rowsBoard, Cell[][] board) {</font></div><div><font size=\"3\">&nbsp;&nbsp;</font></div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; // loop through every cell</font></div><div><font size=\"3\">&nbsp;for (int i = 0; i &lt; colsBoard; i++) {</font></div><div><font size=\"3\">&nbsp; &nbsp; for (int j = 0; j &lt; rowsBoard; j++) {</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; board[i][j].previous = board[i][j].now;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; int aliveNeighbours = 0;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><span style=\"font-size: medium;\"><br></span></div><div><span style=\"font-size: medium;\">&nbsp; &nbsp; &nbsp; // loop through every cell's neighbour including itself</span></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; for (int x = -1; x &lt;= 1; x++) { // note x&lt;=1, y&lt;=1</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; for (int y = -1; y &lt;=1; y++) {</font></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now == 1) { //note: i+x+colsBoard</font></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;aliveNeighbours++;&nbsp;</font></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</font></div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; }</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; }</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp;</font></div><div><font size=\"3\">&nbsp; &nbsp; &nbsp; // minus itself</font></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; aliveNeighbours = aliveNeighbours - board[i][j].now;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp;&nbsp;</font></div><div><font size=\"3\">&nbsp; &nbsp; &nbsp; // rules</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; if (board[i][j].previous == 1) {</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (aliveNeighbours &lt; 2 || aliveNeighbours &gt; 3) {</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; board[i][j].now = 0;&nbsp;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} // otherwise, no change to its state</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; } else {</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (aliveNeighbours == 3) {</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; board[i][j].now = 1;&nbsp;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; }</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp;&nbsp;</font></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; &nbsp; board[i][j].previous = board[i][j].now;</font></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><font size=\"3\">&nbsp; &nbsp; }</font></div><div><font size=\"3\">&nbsp;}</font></div></blockquote><div><font size=\"3\">}</font></div>"
                     }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#E0FFFF"
+                  "background": "transparent"
                 }
               }
             }
@@ -767,15 +780,6 @@
             "2": {
               "title": "randomizeState()",
               "id": 36,
-              "attr": {
-                "style": {
-                  "background": "#E0FFFF"
-                }
-              }
-            },
-            "3": {
-              "title": "evolveByRule()",
-              "id": 37,
               "attr": {
                 "style": {
                   "background": "transparent"
