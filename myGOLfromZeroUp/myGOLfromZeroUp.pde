@@ -1,5 +1,5 @@
 // global variables
-Cell cell1, cell2;
+
 Cell[][] board1;
 int colsBoard, rowsBoard, wCell;
 boolean debugAllToggle, watcherToggle, randomizeBoardToggle;
@@ -9,16 +9,14 @@ void setup() {
   debugAllToggle = true;
   watcherToggle = false;
   randomizeBoardToggle = false;
-  colsBoard = 60;
-  rowsBoard = 60;
+  colsBoard = 10;
+  rowsBoard = 10;
   wCell = 10;
   size(600, 600);
   simpleCheck("create canvas 600:600");
   
   background(0);
 
-  cell1 = new Cell(int(random(width-10)), int(random(height-10)), 10);
-  cell2 = new Cell(int(random(width-10)), int(random(height-10)), 10);
   board1 = new Cell[colsBoard][rowsBoard];
   
   createBoard(colsBoard, rowsBoard, wCell, board1);
@@ -29,18 +27,6 @@ void setup() {
 
 void draw() {
   
-  cell1.display();
-  simpleCheck("cell1 is displayed");
-  check2Values("cell1-x:y", cell1.xCell, cell1.yCell);
-  check2Values("cell1-deadColor:lifeColor", cell1.deathColor, cell1.lifeColor);
-  check2Values("cell1-now:previous", cell1.now, cell1.previous);
-  
-  
-  cell2.display();
-  simpleCheck("cell2 is displayed");
-  check2Values("cell2-x:y", cell2.xCell, cell2.yCell);
-  check2Values("cell2-deadColor:lifeColor", cell2.deathColor, cell2.lifeColor);
-  check2Values("cell2-now:previous", cell2.now, cell2.previous);
 
 /*****
 randomize every cell in the board1
@@ -131,19 +117,21 @@ void evolveBoard(int colsBoard, int rowsBoard, Cell[][] board) {
         }
       }
       
-      aliveNeighbours = aliveNeighbours - board[i][j].now;
+      aliveNeighbours = aliveNeighbours - board[i][j].previous;
       
-      if (board[i][j].previous == 1) {
-         if (aliveNeighbours < 2 || aliveNeighbours > 3) {
-            board[i][j].now = 0; 
-         } // otherwise, no change to its state
-      } else {
-         if (aliveNeighbours == 3) {
-            board[i][j].now = 1; 
-         }
-      }
-      
-      board[i][j].previous = board[i][j].now;
+      //if (board[i][j].previous == 1) {
+      //   if (aliveNeighbours < 2 || aliveNeighbours > 3) {
+      //      board[i][j].now = 0; 
+      //   } // otherwise, no change to its state
+      //} else {
+      //   if (aliveNeighbours == 3) {
+      //      board[i][j].now = 1; 
+      //   }
+      //}
+      if ((board[i][j].now == 1) && aliveNeighbours <2) board[i][j].now = 0;
+      else if ((board[i][j].now == 1) && aliveNeighbours >3) board[i][j].now = 0;
+      else if ((board[i][j].now == 0) && aliveNeighbours == 3) board[i][j].now = 1;
+      //board[i][j].previous = board[i][j].now;
     }
  }
 }
