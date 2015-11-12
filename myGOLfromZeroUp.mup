@@ -547,7 +547,7 @@
                   "id": 95,
                   "attr": {
                     "style": {
-                      "background": "#90EE90"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -560,7 +560,7 @@
                       "content": "<div>void randomizeBoard(int colBoard, int rowBoard, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div><div><br></div><div>1. now let's add randomizeBoardToggle to the function above</div>"
                     },
                     "style": {
-                      "background": "#90EE90"
+                      "background": "transparent"
                     }
                   },
                   "ideas": {}
@@ -579,12 +579,47 @@
                   },
                   "ideas": {
                     "1": {
-                      "title": "This version is not working properly",
-                      "id": 100,
+                      "title": "simplify some rules to see it working or not",
+                      "id": 101,
                       "attr": {
                         "style": {
-                          "background": "#8B0000"
+                          "background": "#90EE90"
                         }
+                      }
+                    },
+                    "2": {
+                      "title": "simplified 1",
+                      "id": 102,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "1. loop through every cell<div>1.1 count number of alive neighbours&nbsp;</div><div>1.2 print out their nums for each cell</div><div>1.3 make the alive cell with three alive neighbours, dark red</div><div>1.4 make the dead cell with three alive neighbours, pink</div><div>1.5</div><div><br></div><div>void evolveBoard1(int colsBoard, int rowsBoard, Cell[][] board) {<br></div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>for (int i = 0; i &lt; colsBoard; i++) {</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>for (int j = 0; j &lt; rowsBoard; j++) {</div></blockquote></div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>int aliveNeighbours = 0;</div></blockquote></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><br></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>for ( int x = -1; x &lt;=1; x++) &nbsp;{</div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>for (int y = -1; y &lt;= 1; y++ ) {</div></blockquote></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now;</div></blockquote></div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><br></div></blockquote></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>}</div></blockquote></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>}</div></blockquote></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>aliveNeighbours -= board[i][j].now;</div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>println(\"cell\", i, \":\", j, \"-&gt; \", aliveNeighbours);</div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><br></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>if (aliveNeighbours == 3 &amp;&amp; board[i][j].now == 0) {</div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>stroke(50);</div></blockquote></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>fill(pink);</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>rect(i*wCell, j*wCell, wCell, wCell);</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>}</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\">else if (aliveNeighbours ==3 &amp;&amp; board[i][j].now ==1) {</blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>stroke(50);</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>fill(dark red);</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>rect(i*wCell, j*wCell, wCell, wCell); }</div></blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><br></div></blockquote></div></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>}</div></blockquote></div></blockquote><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\">}</blockquote></div><div>}</div></blockquote>}"
+                        },
+                        "style": {
+                          "background": "#90EE90"
+                        }
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "This is working",
+                          "id": 103,
+                          "attr": {
+                            "style": {
+                              "background": "#FFA07A"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "go further 2",
+                      "id": 104,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "1. loop through every cell<div>1.1 count number of alive neighbours&nbsp;</div><div>1.2 print out their nums for each cell</div><div>1.3 for the alive cell with two or three alive neighbours, give it &nbsp;dark red id</div><div>1.4 for the dead cell with three alive neighbours, give it pink id</div><div>1.5 for the alive cell with &lt;2 or &gt;3 alive neighbours, give it grey id</div><div>1.6 for the dead cell without == 3 alive neighbours, give it dark black id</div><div><br></div><div>void evolveBoard2(int colsBoard, int rowsBoard, Cell[][] board) {<br></div><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><div>for (int i = 0; i &lt; colsBoard; i++) {</div><div><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">for (int j = 0; j &lt; rowsBoard; j++) {</blockquote></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><div><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">board[i][j].previous = board[i][j].now;</blockquote></div></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">int aliveNeighbours = 0;</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><br></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">for ( int x = -1; x &lt;=1; x++) &nbsp;{</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">for (int y = -1; y &lt;= 1; y++ ) {</blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now;</blockquote></blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><br></blockquote></blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">}</blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">}</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">aliveNeighbours -= board[i][j].now;</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">println(\"cell\", i, \":\", j, \"-&gt; \", aliveNeighbours);</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><br></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">if ( (aliveNeighbours == 3 || aliveNeighbours ==2 ) &amp;&amp; board[i][j].previous == 1) {</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">board[i][j].now = 1; }</blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">else if ( (aliveNeighbours &gt; 3 || aliveNeighbours &lt; 2) &amp;&amp; board[i][j].previous == 1) {</blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">board[i][j].now = 0; }</blockquote>else if ( aliveNeighbours == 3 &amp;&amp; board[i][j].previous == 0 ) {</blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">board[i][j].now = 1}</blockquote>else if ( aliveNeighbours != 3 &amp;&amp; board[i][j].previous == 0) {</blockquote></blockquote></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">board[i][j].now = 0}</blockquote></blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><br></blockquote></blockquote></blockquote><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\"><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">}</blockquote></blockquote><div><blockquote style=\"padding-left: 0px; margin-bottom: 0px; margin-left: 40px; border: none;\">}</blockquote></div><div>}</div></blockquote>}"
+                        },
+                        "style": {}
                       }
                     }
                   }
@@ -744,48 +779,22 @@
               "id": 35,
               "ideas": {
                 "1": {
-                  "title": "stroke(50)",
-                  "id": 38,
+                  "title": "this is done",
+                  "id": 105,
                   "attr": {
-                    "attachment": {
-                      "contentType": "text/html",
-                      "content": "stroke()<div><br></div><div>if totally black, then there is no line frame for each cell</div><div><br></div><div>stroke(50) to make the liner visible but not too contrast</div>"
-                    },
                     "style": {
-                      "background": "transparent"
-                    }
-                  }
-                },
-                "2": {
-                  "title": "fill(deathColor/lifeColor)",
-                  "id": 39,
-                  "attr": {
-                    "attachment": {
-                      "contentType": "text/html",
-                      "content": "fill(deathColor) or fill(lifeColor) ??<div><br></div><div>if now == 1, then lifeColor; otherwise, deathColor</div>"
-                    },
-                    "style": {
-                      "background": "transparent"
-                    }
-                  }
-                },
-                "3": {
-                  "title": "rect() ",
-                  "id": 40,
-                  "attr": {
-                    "attachment": {
-                      "contentType": "text/html",
-                      "content": "<span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\">rect(xCell, yCell, wCell, wCell)</span><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div>"
-                    },
-                    "style": {
-                      "background": "transparent"
+                      "background": "#FFA07A"
                     }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "transparent"
+                  "background": "#90EE90"
+                },
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div><b><font face=\"Arial Black\">Let's give cells four different colours</font></b></div><div><b><font face=\"Arial Black\"><br></font></b></div><div>&nbsp;void display() {</div><div>&nbsp; &nbsp; &nbsp;</div><div>&nbsp; &nbsp; stroke(50);</div><div>&nbsp; &nbsp;&nbsp;</div><div>&nbsp; &nbsp; if (now == 1 &amp;&amp; previous == 1) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp;fill(dark red);&nbsp;</div><div>&nbsp; &nbsp; } else if (previous == 1 &amp;&amp; now == 0 ) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp;fill(grey );&nbsp;</div><div>&nbsp; &nbsp; } else if (previous == 0 &amp;&amp; now == 1) {</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>fill( yellow-pink);</div></blockquote>&nbsp; &nbsp; }else if (previous == 0 &amp;&amp; now == 0) {<br></div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>fill( dark black); }</div></blockquote></div><div>&nbsp; &nbsp;&nbsp;</div><div>&nbsp; &nbsp;&nbsp;</div><div>&nbsp; &nbsp; rect(xCell, yCell, wCell, wCell);</div><div>&nbsp; }</div>"
                 }
               }
             },

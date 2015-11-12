@@ -37,10 +37,10 @@ randomize every cell in the board1
 /*****
 let every cell in board1 evolve
 *****/
-  evolveBoard(colsBoard, rowsBoard, board1);
+  evolveBoard2(colsBoard, rowsBoard, board1);
   displayBoard(colsBoard, rowsBoard, board1);
   simpleCheck("board1 is displayed");
-  
+
   
   noLoop();
 }
@@ -136,9 +136,65 @@ void evolveBoard(int colsBoard, int rowsBoard, Cell[][] board) {
  }
 }
 
+void evolveBoard1(int colsBoard, int rowsBoard, Cell[][] board) {
+
+  for (int i = 0; i < colsBoard; i++) {
+    for (int j = 0; j < rowsBoard; j++) {
+      int aliveNeighbours = 0;
+  
+      for ( int x = -1; x <=1; x++)  {
+        for (int y = -1; y <= 1; y++ ) {
+          aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now;
+          
+         }
+      }
+      aliveNeighbours -= board[i][j].now;
+      println("cell", i, ":", j, "-> ", aliveNeighbours);
+      
+      if (aliveNeighbours == 3 && board[i][j].now == 0) {
+        stroke(50);
+        fill(#FAA45D);
+        rect(i*wCell, j*wCell, wCell, wCell);
+      } else if (aliveNeighbours ==3 && board[i][j].now ==1) {
+        stroke(50);
+        fill(#FF0318);
+        rect(i*wCell, j*wCell, wCell, wCell); 
+      }
+    }
+  }
+}
 
 
 
+void evolveBoard2(int colsBoard, int rowsBoard, Cell[][] board) {
+  for (int i = 0; i < colsBoard; i++) {
+    for (int j = 0; j < rowsBoard; j++) {
+      board[i][j].previous = board[i][j].now;
+      int aliveNeighbours = 0;
+      
+      for ( int x = -1; x <=1; x++)  {
+        for (int y = -1; y <= 1; y++ ) {
+        aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now;
+        
+        }
+      }
+      aliveNeighbours -= board[i][j].now;
+      println("cell", i, ":", j, "-> ", aliveNeighbours);
+      
+      if ( (aliveNeighbours == 3 || aliveNeighbours ==2 ) && board[i][j].previous == 1) {
+        board[i][j].now = 1; 
+      } else if ( (aliveNeighbours > 3 || aliveNeighbours < 2) && board[i][j].previous == 1) {
+        board[i][j].now = 0; 
+      } else if ( aliveNeighbours == 3 && board[i][j].previous == 0 ) {
+         board[i][j].now = 1;
+      } else if ( aliveNeighbours != 3 && board[i][j].previous == 0) {
+        board[i][j].now = 0;
+      }
+    
+      
+    }
+  }
+}
 //****************************************
 // debug functions
 //******************************************
