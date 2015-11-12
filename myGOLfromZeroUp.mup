@@ -538,7 +538,7 @@
                     },
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "<div>void displayBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].display();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
+                      "content": "<div>void displayBoard(int colBoard, int rowBoard, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].display();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
                     }
                   }
                 },
@@ -551,22 +551,13 @@
                     }
                   }
                 },
-                "4": {
-                  "title": "? default value for parameters",
-                  "id": 96,
-                  "attr": {
-                    "style": {
-                      "background": "#3CB371"
-                    }
-                  }
-                },
                 "2.5": {
                   "title": "randomizeBoard()",
                   "id": 97,
                   "attr": {
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "<div>void randomizeBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
+                      "content": "<div>void randomizeBoard(int colBoard, int rowBoard, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
                     },
                     "style": {
                       "background": "#E0FFFF"

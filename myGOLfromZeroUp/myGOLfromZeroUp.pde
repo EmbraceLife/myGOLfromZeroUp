@@ -40,11 +40,13 @@ void draw() {
   check2Values("cell2-deadColor:lifeColor", cell2.deathColor, cell2.lifeColor);
   check2Values("cell2-now:previous", cell2.now, cell2.previous);
   
-  randomizeBoard(10, 10, 10, board1);
+  randomizeBoard(10, 10, board1);
   simpleCheck("board1 is randomized");
   
-  displayBoard(10, 10, 10, board1);
+  displayBoard(10, 10, board1);
   simpleCheck("board1 is displayed");
+  
+  
   noLoop();
 }
 
@@ -71,7 +73,7 @@ void createBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
     }
 }
  
-void displayBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+void displayBoard(int colBoard, int rowBoard, Cell[][] board) {
     for (int i = 0; i < colBoard; i++) {
      for (int j = 0; j < rowBoard; j++) {
          board[i][j].display();
@@ -79,7 +81,7 @@ void displayBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
     }
 } 
 
-void randomizeBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+void randomizeBoard(int colBoard, int rowBoard, Cell[][] board) {
     for (int i = 0; i < colBoard; i++) {
      for (int j = 0; j < rowBoard; j++) {
          board[i][j].randomizeState();
