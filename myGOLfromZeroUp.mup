@@ -15,31 +15,28 @@
               "title": "boolean",
               "id": 42,
               "ideas": {
-                "1": {
-                  "title": "debugSetup",
-                  "id": 43,
-                  "attr": {
-                    "style": {}
-                  }
-                },
                 "2": {
-                  "title": "debugToggle",
+                  "title": "debugAllToggle",
                   "id": 44,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "#ff99cc"
+                    }
                   }
                 },
                 "3": {
                   "title": "watcherToggle",
                   "id": 45,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "#ff99cc"
+                    }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#ff6600"
+                  "background": "transparent"
                 }
               }
             },
@@ -48,7 +45,7 @@
               "id": 46,
               "ideas": {
                 "1": {
-                  "title": "cell1",
+                  "title": "cell1, cell2",
                   "id": 47,
                   "attr": {
                     "style": {}
@@ -80,30 +77,27 @@
               "id": 48,
               "ideas": {
                 "1": {
-                  "title": "true",
+                  "title": "debugAllToggle = true",
                   "id": 49,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "#ff99cc"
+                    }
                   }
                 },
                 "2": {
-                  "title": "false",
+                  "title": "watcherToggle = false",
                   "id": 50,
                   "attr": {
-                    "style": {}
-                  }
-                },
-                "3": {
-                  "title": "false",
-                  "id": 51,
-                  "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "#ff99cc"
+                    }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#ff6600"
+                  "background": "transparent"
                 }
               }
             },
@@ -126,20 +120,16 @@
                   }
                 },
                 "3": {
-                  "title": "debugSetup",
+                  "title": "simpleCheck()",
                   "id": 60,
-                  "ideas": {
-                    "1": {
-                      "title": "only run once",
-                      "id": 62,
-                      "attr": {
-                        "style": {}
-                      }
-                    }
-                  },
+                  "ideas": {},
                   "attr": {
                     "style": {
-                      "background": "#ff6600"
+                      "background": "#ff99cc"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "simpleCheck(\"create canvas 600:600\");"
                     }
                   }
                 }
@@ -149,7 +139,7 @@
               }
             },
             "3": {
-              "title": "cell1",
+              "title": "cell1,cell2",
               "id": 58,
               "ideas": {
                 "1": {
@@ -158,21 +148,10 @@
                   "attr": {
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "cell1 = new Cell(int(random(width-10)), int(random(height-10)), 10);<div><br></div><div>make sure cell1 will be within canvas</div>"
-                    },
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "debugSetup",
-                  "id": 61,
-                  "attr": {
-                    "attachment": {
-                      "contentType": "text/html",
-                      "content": "<div>&nbsp; if (debugSetup) {</div><div>&nbsp; println(\"cell1 location: \", cell1.xCell, \":\", cell1.yCell);</div><div>&nbsp; println(\"cell1 color: \", cell1.deathColor, \":\", cell1.lifeColor);</div><div>&nbsp; println(\"cell1 state: \", cell1.now, \":\", cell1.previous);</div><div>&nbsp; }</div><div><br></div><div>There is no need for toggling debugSetup, just manually set it true always.&nbsp;</div><div><br></div><div>in fact, when using it we may have to use it with noLoop()</div>"
+                      "content": "cell1 = new Cell(int(random(width-10)), int(random(height-10)), 10);<div><div>cell2 = new Cell(int(random(width-10)), int(random(height-10)), 10);</div></div><div><br></div><div>make sure cell1 will be within canvas</div>"
                     },
                     "style": {
-                      "background": "#ff6600"
+                      "background": "transparent"
                     }
                   }
                 }
@@ -188,7 +167,7 @@
           "id": 6,
           "ideas": {
             "1": {
-              "title": "cell1",
+              "title": "cells",
               "id": 64,
               "ideas": {
                 "1": {
@@ -199,16 +178,36 @@
                   }
                 },
                 "2": {
-                  "title": "debug it",
+                  "title": "debug cell1 and cell2",
                   "id": 65,
                   "attr": {
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "<div>&nbsp; if (debugToggle) {</div><div>&nbsp; &nbsp; &nbsp;println(\"frame: \", frameCount);</div><div>&nbsp; &nbsp; &nbsp;println(\"cell1 is displayed\");&nbsp;</div><div>&nbsp; }</div><div><br></div><div>using frameCount to tell us it is keep drawing cell1</div>"
+                      "content": "<blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>simpleCheck(\"cell1 is displayed\");<br></div><div>check2Values(\"cell1-x:y\", cell1.xCell, cell1.yCell);</div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>check2Values(\"cell1-deadColor:lifeColor\", cell1.deathColor, cell1.lifeColor);</div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>check2Values(\"cell1-now:previous\", cell1.now, cell1.previous);</div></blockquote><div>&nbsp;&nbsp;</div>"
                     },
                     "style": {
-                      "background": "#ff6600"
+                      "background": "#FFB6C1"
                     }
+                  }
+                },
+                "3": {
+                  "title": "noLoop()",
+                  "id": 72,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "noLoop()&nbsp;<div><br></div><div>-- no more draw() or continuously drawing;</div><div>-- it can be placed at the end of setup() or inside draw();</div>"
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "cell2.display()",
+                  "id": 70,
+                  "attr": {
+                    "style": {}
                   }
                 }
               },
@@ -237,18 +236,18 @@
               "id": 66,
               "ideas": {
                 "1": {
-                  "title": "debugToggle()",
+                  "title": "debugAllControl()",
                   "id": 67,
                   "attr": {
                     "attachment": {
                       "contentType": "text/html",
-                      "content": "<div>&nbsp; if (key == 'd') {</div><div>&nbsp; &nbsp; &nbsp;debugToggle = !debugToggle;&nbsp;</div><div>&nbsp; }</div><div>&nbsp;&nbsp;</div><div><br></div><div><br></div><div>create toggles to turn debug on and off</div>"
+                      "content": "<div>&nbsp; if (key == 'd') {</div><div>&nbsp; &nbsp; &nbsp;debugAllToggle = !debugAllToggle;&nbsp;</div><div>&nbsp; }</div><div>&nbsp;&nbsp;</div><div><br></div><div><br></div><div>create toggles to turn debug on and off</div>"
                     },
                     "style": {}
                   }
                 },
                 "2": {
-                  "title": "watcherToggle()",
+                  "title": "watcherControl()",
                   "id": 68,
                   "attr": {
                     "attachment": {
@@ -261,17 +260,171 @@
               },
               "attr": {
                 "style": {
-                  "background": "#ff6600"
+                  "background": "#F08080"
+                }
+              }
+            },
+            "2": {
+              "title": "Looping",
+              "id": 74,
+              "ideas": {
+                "1": {
+                  "title": "drawAnotherFrame()",
+                  "id": 75,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void drawAnotherFrame() {</div><div>&nbsp; &nbsp;if (key == 'n') {</div><div>&nbsp; &nbsp; &nbsp; redraw();</div><div>&nbsp; &nbsp;}</div><div>}</div>"
+                    },
+                    "style": {
+                      "background": "#F08080"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "drawContinue()",
+                  "id": 76,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void drawContinue() {</div><div>&nbsp; if (key == ' ') {</div><div>&nbsp; &nbsp; loop();&nbsp;</div><div>&nbsp; }</div><div>}</div>"
+                    },
+                    "style": {
+                      "background": "#F08080"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#F08080"
                 }
               }
             }
           }
         },
         "5": {
-          "title": "...",
-          "id": 8,
+          "title": "functions",
+          "id": 80,
+          "ideas": {
+            "1": {
+              "title": "debug",
+              "id": 8,
+              "attr": {
+                "style": {
+                  "background": "#F08080"
+                }
+              },
+              "ideas": {
+                "1": {
+                  "title": "simpleCheck()",
+                  "id": 77,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void simpleCheck(String words) {</div><div>&nbsp; if (debugAllToggle) {</div><div>&nbsp; &nbsp; &nbsp;print(\"frame\", frameCount, \"-&gt; \");</div><div>&nbsp; &nbsp; &nbsp;println(words);&nbsp;</div><div>&nbsp; }</div><div>}</div>"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "checkValue()",
+                  "id": 78,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void checkValue(String words, int value) {</div><div>&nbsp; if (debugAllToggle) {</div><div>&nbsp; &nbsp;print(\"frame\", frameCount, \"-&gt; \");</div><div>&nbsp; &nbsp;print(words, \"-&gt; \");</div><div>&nbsp; &nbsp;println(value);</div><div>&nbsp; }</div><div>}</div>"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "check2Values()",
+                  "id": 79,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void check2Values(String words, int value1, int value2) {</div><div>&nbsp; if (debugAllToggle) {</div><div>&nbsp; &nbsp;print(\"frame\", frameCount, \"-&gt; \");</div><div>&nbsp; &nbsp;print(words, \"-&gt; \");</div><div>&nbsp; &nbsp;println(value1, \":\", value2);</div><div>&nbsp; }</div><div>}</div>"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "drawAnotherFrame()",
+                  "id": 84,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void drawAnotherFrame() {</div><div>&nbsp; &nbsp;if (key == 'n') {</div><div>&nbsp; &nbsp; &nbsp; redraw();</div><div>&nbsp; &nbsp;}</div><div>}</div>"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "drawContinue()",
+                  "id": 85,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void drawContinue() {</div><div>&nbsp; if (key == ' ') {</div><div>&nbsp; &nbsp; loop();&nbsp;</div><div>&nbsp; }</div><div>}</div>"
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "toggles",
+              "id": 81,
+              "ideas": {
+                "1": {
+                  "title": "debugAllControl()",
+                  "id": 82,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void debugAllControl() {</div><div>&nbsp; &nbsp;if (key == 'd') {</div><div>&nbsp; &nbsp; &nbsp; debugAllToggle = !debugAllToggle;&nbsp;</div><div>&nbsp; &nbsp;}</div><div>}</div>"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "watcherControl()",
+                  "id": 83,
+                  "attr": {
+                    "style": {
+                      "background": "#F08080"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void watcherControl() {</div><div>&nbsp; if (key == 'w') {</div><div>&nbsp; &nbsp; &nbsp;watcherToggle = !watcherToggle;</div><div>&nbsp; }</div><div>}</div>"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#F08080"
+                }
+              }
+            }
+          },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "#ADD8E6"
+            }
           }
         }
       },
