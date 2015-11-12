@@ -22,6 +22,7 @@ class Cell {
    previous = now;
   }
   
+  
   void display() {
      
     stroke(50);
@@ -36,5 +37,11 @@ class Cell {
     rect(xCell, yCell, wCell, wCell);
   }
   
-  
+  void randomizeState() {
+    if (int(random(100)) < 20) {
+        now = 1;
+    } else {
+        now = 0; 
+    }
+  }
 }

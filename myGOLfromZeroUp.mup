@@ -20,7 +20,7 @@
                   "id": 44,
                   "attr": {
                     "style": {
-                      "background": "#ff99cc"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                   "id": 45,
                   "attr": {
                     "style": {
-                      "background": "#ff99cc"
+                      "background": "transparent"
                     }
                   }
                 }
@@ -48,17 +48,43 @@
                   "title": "cell1, cell2",
                   "id": 47,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 }
               },
               "attr": {
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
+              }
+            },
+            "3": {
+              "title": "Cell[][]",
+              "id": 86,
+              "ideas": {
+                "1": {
+                  "title": "board1",
+                  "id": 87,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0FFFF"
+                }
               }
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "transparent"
+            }
           }
         },
         "2": {
@@ -69,7 +95,9 @@
               "contentType": "text/html",
               "content": "we can set println() debug at setup()"
             },
-            "style": {}
+            "style": {
+              "background": "transparent"
+            }
           },
           "ideas": {
             "1": {
@@ -81,7 +109,7 @@
                   "id": 49,
                   "attr": {
                     "style": {
-                      "background": "#ff99cc"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -90,7 +118,7 @@
                   "id": 50,
                   "attr": {
                     "style": {
-                      "background": "#ff99cc"
+                      "background": "transparent"
                     }
                   }
                 }
@@ -109,14 +137,18 @@
                   "title": "size(600,600)",
                   "id": 56,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "2": {
                   "title": "background(0)",
                   "id": 57,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "3": {
@@ -125,7 +157,7 @@
                   "ideas": {},
                   "attr": {
                     "style": {
-                      "background": "#ff99cc"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -135,7 +167,9 @@
                 }
               },
               "attr": {
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
               }
             },
             "3": {
@@ -143,7 +177,7 @@
               "id": 58,
               "ideas": {
                 "1": {
-                  "title": "instantiation",
+                  "title": "= new Cell(x,y,w)",
                   "id": 59,
                   "attr": {
                     "attachment": {
@@ -157,7 +191,51 @@
                 }
               },
               "attr": {
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
+              }
+            },
+            "4": {
+              "title": "board1",
+              "id": 88,
+              "ideas": {
+                "1": {
+                  "title": "= new Cell[10][10]",
+                  "id": 89,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "board1[i][j] = new Cell(x,y,w)",
+                  "id": 90,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>&nbsp; for (int i = 0; i &lt; 10; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; 10; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; board1[i][j] = new Cell(200+i*cell1.wCell, 200+j*cell1.wCell, cell1.wCell);&nbsp;</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; }</div><div><br></div><div>make sure to draw board1 starting from (200, 200)</div>"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "board[i][j] .display()",
+                  "id": 91,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0FFFF"
+                }
               }
             }
           }
@@ -174,7 +252,9 @@
                   "title": "cell1.display()",
                   "id": 63,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "2": {
@@ -186,7 +266,7 @@
                       "content": "<blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>simpleCheck(\"cell1 is displayed\");<br></div><div>check2Values(\"cell1-x:y\", cell1.xCell, cell1.yCell);</div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>check2Values(\"cell1-deadColor:lifeColor\", cell1.deathColor, cell1.lifeColor);</div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>check2Values(\"cell1-now:previous\", cell1.now, cell1.previous);</div></blockquote><div>&nbsp;&nbsp;</div>"
                     },
                     "style": {
-                      "background": "#FFB6C1"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -195,7 +275,7 @@
                   "id": 72,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -207,17 +287,23 @@
                   "title": "cell2.display()",
                   "id": 70,
                   "attr": {
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 }
               },
               "attr": {
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
               }
             }
           },
           "attr": {
-            "style": {}
+            "style": {
+              "background": "transparent"
+            }
           }
         },
         "4": {
@@ -228,7 +314,9 @@
               "contentType": "text/html",
               "content": "we can press key to toggle specific debug like watching specific points of the programs"
             },
-            "style": {}
+            "style": {
+              "background": "transparent"
+            }
           },
           "ideas": {
             "1": {
@@ -243,7 +331,9 @@
                       "contentType": "text/html",
                       "content": "<div>&nbsp; if (key == 'd') {</div><div>&nbsp; &nbsp; &nbsp;debugAllToggle = !debugAllToggle;&nbsp;</div><div>&nbsp; }</div><div>&nbsp;&nbsp;</div><div><br></div><div><br></div><div>create toggles to turn debug on and off</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "2": {
@@ -254,13 +344,15 @@
                       "contentType": "text/html",
                       "content": "<div>&nbsp; if (key == 'w') {</div><div>&nbsp; &nbsp; &nbsp;watcherToggle = !watcherToggle;</div><div>&nbsp; }</div><div><br></div><div>turn watcher on and off</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#F08080"
+                  "background": "transparent"
                 }
               }
             },
@@ -277,7 +369,7 @@
                       "content": "<div>void drawAnotherFrame() {</div><div>&nbsp; &nbsp;if (key == 'n') {</div><div>&nbsp; &nbsp; &nbsp; redraw();</div><div>&nbsp; &nbsp;}</div><div>}</div>"
                     },
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     }
                   }
                 },
@@ -290,14 +382,14 @@
                       "content": "<div>void drawContinue() {</div><div>&nbsp; if (key == ' ') {</div><div>&nbsp; &nbsp; loop();&nbsp;</div><div>&nbsp; }</div><div>}</div>"
                     },
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     }
                   }
                 }
               },
               "attr": {
                 "style": {
-                  "background": "#F08080"
+                  "background": "transparent"
                 }
               }
             }
@@ -312,7 +404,7 @@
               "id": 8,
               "attr": {
                 "style": {
-                  "background": "#F08080"
+                  "background": "transparent"
                 }
               },
               "ideas": {
@@ -321,7 +413,7 @@
                   "id": 77,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -334,7 +426,7 @@
                   "id": 78,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -347,7 +439,7 @@
                   "id": 79,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -360,7 +452,7 @@
                   "id": 84,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -373,7 +465,7 @@
                   "id": 85,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -392,7 +484,7 @@
                   "id": 82,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -405,7 +497,7 @@
                   "id": 83,
                   "attr": {
                     "style": {
-                      "background": "#F08080"
+                      "background": "transparent"
                     },
                     "attachment": {
                       "contentType": "text/html",
@@ -416,20 +508,90 @@
               },
               "attr": {
                 "style": {
-                  "background": "#F08080"
+                  "background": "transparent"
+                }
+              }
+            },
+            "3": {
+              "title": "board",
+              "id": 92,
+              "ideas": {
+                "1": {
+                  "title": "createBoard",
+                  "id": 93,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void createBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j] = new Cell(i*wCell, j*wCell, wCell);</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}</div>"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "displayBoard",
+                  "id": 94,
+                  "attr": {
+                    "style": {
+                      "background": "#E0FFFF"
+                    },
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void displayBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].display();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "? boardStatus()",
+                  "id": 95,
+                  "attr": {
+                    "style": {
+                      "background": "#3CB371"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "? default value for parameters",
+                  "id": 96,
+                  "attr": {
+                    "style": {
+                      "background": "#3CB371"
+                    }
+                  }
+                },
+                "2.5": {
+                  "title": "randomizeBoard()",
+                  "id": 97,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>void randomizeBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {</div><div>&nbsp; &nbsp; for (int i = 0; i &lt; colBoard; i++) {</div><div>&nbsp; &nbsp; &nbsp;for (int j = 0; j &lt; rowBoard; j++) {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;board[i][j].randomizeState();</div><div>&nbsp; &nbsp; &nbsp;}</div><div>&nbsp; &nbsp; }</div><div>}&nbsp;</div>"
+                    },
+                    "style": {
+                      "background": "#E0FFFF"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0FFFF"
                 }
               }
             }
           },
           "attr": {
             "style": {
-              "background": "#ADD8E6"
+              "background": "transparent"
             }
           }
         }
       },
       "attr": {
-        "style": {}
+        "style": {
+          "background": "transparent"
+        }
       }
     },
     "11": {
@@ -440,7 +602,9 @@
           "contentType": "text/html",
           "content": "Cell -- essential unit of Game of Life, and board of canvas<div><br></div><div>Cell -- has all the AI DNA</div>"
         },
-        "style": {}
+        "style": {
+          "background": "transparent"
+        }
       },
       "ideas": {
         "1": {
@@ -453,15 +617,35 @@
               "ideas": {
                 "1": {
                   "title": "xCell",
-                  "id": 14
+                  "id": 14,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
                 },
                 "2": {
                   "title": "yCell",
-                  "id": 15
+                  "id": 15,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
                 },
                 "3": {
                   "title": "wCell",
-                  "id": 16
+                  "id": 16,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "transparent"
                 }
               }
             },
@@ -471,11 +655,26 @@
               "ideas": {
                 "1": {
                   "title": "lifeColor",
-                  "id": 19
+                  "id": 19,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
                 },
                 "2": {
                   "title": "deathColor",
-                  "id": 20
+                  "id": 20,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "transparent"
                 }
               }
             },
@@ -485,11 +684,21 @@
               "ideas": {
                 "1": {
                   "title": "now",
-                  "id": 22
+                  "id": 22,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
                 },
                 "2": {
                   "title": "previous",
-                  "id": 23
+                  "id": 23,
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
+                    }
+                  }
                 }
               },
               "attr": {
@@ -497,13 +706,17 @@
                   "contentType": "text/html",
                   "content": "state --<div><br></div><div>1. colour is specified by value or number differences</div><div>2. state is to use number to differentiate colours for cells</div>"
                 },
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
               }
             }
           },
           "attr": {
             "collapsed": true,
-            "style": {}
+            "style": {
+              "background": "transparent"
+            }
           }
         },
         "2": {
@@ -522,7 +735,9 @@
                       "contentType": "text/html",
                       "content": "stroke()<div><br></div><div>if totally black, then there is no line frame for each cell</div><div><br></div><div>stroke(50) to make the liner visible but not too contrast</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "2": {
@@ -533,7 +748,9 @@
                       "contentType": "text/html",
                       "content": "fill(deathColor) or fill(lifeColor) ??<div><br></div><div>if now == 1, then lifeColor; otherwise, deathColor</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "3": {
@@ -544,21 +761,40 @@
                       "contentType": "text/html",
                       "content": "<span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\">rect(xCell, yCell, wCell, wCell)</span><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div><div><span style=\"color: rgb(79, 79, 79); font-family: Helvetica, 'Arial Unicode MS', sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\"><br></span></div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 }
               },
               "attr": {
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
               }
             },
             "2": {
               "title": "randomizeState()",
-              "id": 36
+              "id": 36,
+              "attr": {
+                "style": {
+                  "background": "#E0FFFF"
+                }
+              }
             },
             "3": {
               "title": "evolveByRule()",
-              "id": 37
+              "id": 37,
+              "attr": {
+                "style": {
+                  "background": "transparent"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "transparent"
             }
           }
         },
@@ -574,7 +810,9 @@
                   "contentType": "text/html",
                   "content": "Cell(x, y, w) --<div><br></div><div>1. whenever instantiate a cell object, we give it a specified xCell, yCell and wCell</div><div>2. because, cells are everywhere in canvas, we need specifics to manipulate them</div>"
                 },
-                "style": {}
+                "style": {
+                  "background": "transparent"
+                }
               },
               "ideas": {
                 "1": {
@@ -585,7 +823,9 @@
                       "contentType": "text/html",
                       "content": "x, y, w --<div><br></div><div>1. differentiate one cell from the other when instantiating cells</div><div><br></div><div>2. values of other fields are shared by all cells at instantiation</div><div><br></div><div>3. other fields may change values of other fields during evolution</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "2": {
@@ -594,7 +834,12 @@
                   "ideas": {
                     "1": {
                       "title": "int(random(100) < 15",
-                      "id": 41
+                      "id": 41,
+                      "attr": {
+                        "style": {
+                          "background": "transparent"
+                        }
+                      }
                     }
                   },
                   "attr": {
@@ -602,7 +847,9 @@
                       "contentType": "text/html",
                       "content": "<div><div>&nbsp; &nbsp;if (int(random(100)) &lt; 15) {</div><div>&nbsp; &nbsp; &nbsp;now = 1;</div><div>&nbsp; &nbsp;} else {</div><div>&nbsp; &nbsp; &nbsp;now = 0;&nbsp;</div><div>&nbsp; &nbsp;}</div></div><div><br></div><div>make sure only 15% change to have an alive cell</div>"
                     },
-                    "style": {}
+                    "style": {
+                      "background": "transparent"
+                    }
                   }
                 },
                 "3": {
@@ -611,7 +858,17 @@
                   "ideas": {
                     "1": {
                       "title": "= now;",
-                      "id": 30
+                      "id": 30,
+                      "attr": {
+                        "style": {
+                          "background": "transparent"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
                     }
                   }
                 },
@@ -621,7 +878,17 @@
                   "ideas": {
                     "1": {
                       "title": "= color selector value",
-                      "id": 32
+                      "id": 32,
+                      "attr": {
+                        "style": {
+                          "background": "transparent"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
                     }
                   }
                 },
@@ -631,7 +898,17 @@
                   "ideas": {
                     "1": {
                       "title": "=color selector value",
-                      "id": 34
+                      "id": 34,
+                      "attr": {
+                        "style": {
+                          "background": "transparent"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "transparent"
                     }
                   }
                 }
@@ -639,7 +916,9 @@
             }
           },
           "attr": {
-            "style": {},
+            "style": {
+              "background": "transparent"
+            },
             "collapsed": true
           }
         }
@@ -651,6 +930,8 @@
     "storyboards": [
       "Storyboard 1"
     ],
-    "style": {}
+    "style": {
+      "background": "transparent"
+    }
   }
 }

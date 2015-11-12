@@ -1,5 +1,6 @@
 // global variables
 Cell cell1, cell2;
+Cell[][] board1;
 boolean debugAllToggle, watcherToggle;
 
 void setup() {
@@ -14,10 +15,13 @@ void setup() {
 
   cell1 = new Cell(int(random(width-10)), int(random(height-10)), 10);
   cell2 = new Cell(int(random(width-10)), int(random(height-10)), 10);
-
+  board1 = new Cell[10][10];
+  
+  createBoard(10, 10, 10, board1);
+  simpleCheck("board1 is formed");
 }
 
- 
+
 
 void draw() {
   
@@ -36,6 +40,11 @@ void draw() {
   check2Values("cell2-deadColor:lifeColor", cell2.deathColor, cell2.lifeColor);
   check2Values("cell2-now:previous", cell2.now, cell2.previous);
   
+  randomizeBoard(10, 10, 10, board1);
+  simpleCheck("board1 is randomized");
+  
+  displayBoard(10, 10, 10, board1);
+  simpleCheck("board1 is displayed");
   noLoop();
 }
 
@@ -48,6 +57,39 @@ void keyPressed() {
   debugAllControl();
   watcherControl();
 }
+
+
+//*****************************************
+// board functions
+//*****************************************
+
+void createBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+    for (int i = 0; i < colBoard; i++) {
+     for (int j = 0; j < rowBoard; j++) {
+         board[i][j] = new Cell(i*wCell, j*wCell, wCell);
+     }
+    }
+}
+ 
+void displayBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+    for (int i = 0; i < colBoard; i++) {
+     for (int j = 0; j < rowBoard; j++) {
+         board[i][j].display();
+     }
+    }
+} 
+
+void randomizeBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+    for (int i = 0; i < colBoard; i++) {
+     for (int j = 0; j < rowBoard; j++) {
+         board[i][j].randomizeState();
+     }
+    }
+} 
+
+//****************************************
+// debug functions
+//******************************************
 
 void drawContinue() {
   if (key == ' ') {
@@ -86,6 +128,10 @@ void check2Values(String words, int value1, int value2) {
   }
 } 
 
+
+//****************************************
+// Toggle Keys
+//****************************************
 void debugAllControl() {
    if (key == 'd') {
       debugAllToggle = !debugAllToggle; 
