@@ -9,16 +9,15 @@ void setup() {
   debugAllToggle = true;
   watcherToggle = false;
   randomizeBoardToggle = false;
-  colsBoard = 10;
-  rowsBoard = 10;
-  wCell = 10;
+  colsBoard = 120;
+  rowsBoard = 120;
+  wCell = 5;
   size(600, 600);
   simpleCheck("create canvas 600:600");
   
   background(0);
 
-  board1 = new Cell[colsBoard][rowsBoard];
-  
+  board1 = new Cell[colsBoard][rowsBoard]; 
   createBoard(colsBoard, rowsBoard, wCell, board1);
   simpleCheck("board1 is formed");
 }
@@ -37,12 +36,12 @@ randomize every cell in the board1
 /*****
 let every cell in board1 evolve
 *****/
-  evolveBoard2(colsBoard, rowsBoard, board1);
+  evolveBoard(colsBoard, rowsBoard, board1);
   displayBoard(colsBoard, rowsBoard, board1);
   simpleCheck("board1 is displayed");
 
   
-  noLoop();
+  //noLoop();
 }
 
 
@@ -65,6 +64,8 @@ press r to trigger
 //*****************************************
 
 void createBoard(int colBoard, int rowBoard, int wCell, Cell[][] board) {
+  
+    
     for (int i = 0; i < colBoard; i++) {
      for (int j = 0; j < rowBoard; j++) {
          board[i][j] = new Cell(i*wCell, j*wCell, wCell);
@@ -128,9 +129,11 @@ void evolveBoard(int colsBoard, int rowsBoard, Cell[][] board) {
       //      board[i][j].now = 1; 
       //   }
       //}
-      if ((board[i][j].now == 1) && aliveNeighbours <2) board[i][j].now = 0;
-      else if ((board[i][j].now == 1) && aliveNeighbours >3) board[i][j].now = 0;
-      else if ((board[i][j].now == 0) && aliveNeighbours == 3) board[i][j].now = 1;
+      if ((board[i][j].previous == 1) && aliveNeighbours <2) board[i][j].now = 0;
+      else if ((board[i][j].previous == 1) && aliveNeighbours >3) board[i][j].now = 0;
+      else if ((board[i][j].previous == 1) && (aliveNeighbours == 2 || aliveNeighbours == 3)) board[i][j].now = 1;
+      else if ((board[i][j].previous == 0) && aliveNeighbours == 3) board[i][j].now = 1;
+      else if (board[i][j].previous == 0 && aliveNeighbours != 3 ) board[i][j].now = 0;
       //board[i][j].previous = board[i][j].now;
     }
  }
@@ -174,14 +177,14 @@ void evolveBoard2(int colsBoard, int rowsBoard, Cell[][] board) {
       
       for ( int x = -1; x <=1; x++)  {
         for (int y = -1; y <= 1; y++ ) {
-        aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].now;
+        aliveNeighbours += board[(i+x+colsBoard)%colsBoard][(j+y+rowsBoard)%rowsBoard].previous;
         
         }
       }
       aliveNeighbours -= board[i][j].now;
-      println("cell", i, ":", j, "-> ", aliveNeighbours);
+      //println("cell", i, ":", j, "-> ", aliveNeighbours);
       
-      if ( (aliveNeighbours == 3 || aliveNeighbours ==2 ) && board[i][j].previous == 1) {
+      if ( (aliveNeighbours == 3 || aliveNeighbours == 2 ) && board[i][j].previous == 1) {
         board[i][j].now = 1; 
       } else if ( (aliveNeighbours > 3 || aliveNeighbours < 2) && board[i][j].previous == 1) {
         board[i][j].now = 0; 

@@ -13,7 +13,7 @@ class Cell {
     lifeColor = #EA5905;
     deathColor = #050200;
 
-    if (int(random(100)) < 15) {
+    if (int(random(100)) < 8) {
       now = 1;
     } else {
       now = 0;
@@ -43,7 +43,7 @@ class Cell {
   }
 
   void randomizeState() {
-    if (int(random(100)) < 20) {
+    if (int(random(100)) < 8) {
       now = 1;
     } else {
       now = 0;
